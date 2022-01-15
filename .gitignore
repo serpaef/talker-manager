@@ -289,6 +289,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,windows,linux,visualstudiocode,intellij
-
-#ignora arquivo talker.json, visto que ele é sempre restaurado no avaliador
-talker.json
