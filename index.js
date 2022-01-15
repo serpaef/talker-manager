@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const getTalkers = require('./middlewares/getTalkers');
 const getTalkerById = require('./middlewares/getTalkerById');
+const login = require('./middlewares/login');
 
 const app = express();
 app.use(bodyParser.json());
@@ -14,9 +15,11 @@ app.get('/', (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
+app.get('/talker/:id', getTalkerById);
+
 app.get('/talker', getTalkers);
 
-app.get('/talker/:id', getTalkerById);
+app.post('/login', login);
 
 app.listen(PORT, () => {
   console.log('Online');
