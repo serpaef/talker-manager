@@ -1,9 +1,6 @@
 // Used the tip from user radicand on https://gist.github.com/6174/6062387;
 const crypto = require('crypto');
-
-function send400(message, res) {
-  return res.status(400).json({ message });
-}
+const send400 = require('../utils/send400');
 
 function login(req, res) {
   const { email, password } = req.body;
